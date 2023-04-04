@@ -1,5 +1,5 @@
 /.idea/
-/uploads/*
+# /uploads/*
 
 /vendor/
 node_modules/

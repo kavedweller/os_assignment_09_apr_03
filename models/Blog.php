@@ -8,7 +8,7 @@ class Blog
     private $data  = [];
 
     public function __construct()
-    {
+    {   // Test data will be replaced by mysqli_query
         $this->blogs = [
             0 => [
                 'id' => 1,
@@ -46,6 +46,46 @@ class Blog
         ];
     }
 
+/*
+    public function __construct($post = null, $files = null)
+    {
+        $this->database = new Database();
+        if (isset($post['title']))
+        {
+            $this->title = htmlentities($post['title']);
+            $this->author = htmlentities($post['author']);
+            $this->description = htmlentities($post['description']);
+//            $this->image = $post['image'];
+            if (isset($post['id'])) {
+                $this->id = $post['id'];
+            }
+
+            if ($files['image']['name'])
+            {
+                $this->imageName = $files['image']['name'];
+                $this->tempLocation = $files['image']['tmp_name'];
+                $this->directory = 'assets/img/blog-images/';
+            }
+        }
+    }
+
+
+    public function getImageUrl()
+    {
+        move_uploaded_file($this->tempLocation, $this->directory . $this->imageName);
+        return $this->directory . $this->imageName;
+    }
+
+    public function newBlog()
+    {
+        $this->image = $this->getImageUrl();
+
+        $this->sql = "INSERT INTO `blogs` (`title`, `author`, `description`, `image`) VALUES ('$this->title', '$this->author','$this->description', '$this->image')";
+        mysqli_query($this->database->dbConnect(), $this->sql);
+        return 'Record saved successfully';
+    }
+
+    */
 
     public function getAllBlog()
     {
