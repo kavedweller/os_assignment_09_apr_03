@@ -1,0 +1,13 @@
+
+.list-unstyled {
+    padding-left: 0;
+    list-style: none;
+    text-decoration: none;
+    }
+
+.bg-image {
+    background-image: url('/assets/images/elementor-placeholder-image.webp');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    }
